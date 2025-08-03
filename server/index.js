@@ -287,6 +287,9 @@ async function seedDatabase() {
   }
 }
 
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server is running on port ${PORT}`);
+  console.log(`Server accessible at:`);
+  console.log(`- Local: http://localhost:${PORT}`);
+  console.log(`- Network: http://0.0.0.0:${PORT}`);
 });
